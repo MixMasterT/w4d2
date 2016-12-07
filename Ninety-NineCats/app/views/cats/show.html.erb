@@ -1,0 +1,40 @@
+<h1><%= @cat.name %></h1>
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Birth Date</th>
+    <th>Sex</th>
+  </tr>
+  <tr>
+    <td><%= @cat.color  %></td>
+    <td><%= @cat.birth_date  %></td>
+    <td><%= @cat.sex  %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><%= @cat.description %></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <th><h2>Rental Requests</h2></th>
+  <tr>
+    <th><h4>Start Date</h4></th>
+    <th><h4>End Date</h4></th>
+    <th><h4>Status</h4></th>
+    <th><h4>Approve/Deny</h4><th>
+  </tr>
+  <% @requests.each do |r| %>
+  <tr>
+    <td><%= r.start_date %></td>
+    <td><%= r.end_date %></td>
+    <td><%= r.status %></td>
+    <td><button on_click=<%= r.approve! %> >Approve</button>
+    <button on_click=<%= r.deny! %> >Deny</button></td>
+  </tr>
+  <% end %>
+</table>

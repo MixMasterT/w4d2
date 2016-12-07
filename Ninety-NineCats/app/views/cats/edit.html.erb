@@ -1,0 +1,48 @@
+<h1>Edit cat!</h1>
+
+<%= render 'shared/cat_form', cat: @cat, action: :edit %>
+<!-- <form action='/cats/<%= @cat.id %>' method="post">
+  <input type="hidden" name="_method" value="PATCH">
+
+  <label for='cat_name'>name</label>
+  <input id='cat_name' type="text" name="cat[name]" value="<%= @cat.name %>">
+
+  <br><br>
+
+  <label>Birth Date
+    <input type="date" name="cat[birth_date]" value="<%= @cat.birth_date %>">
+  </label>
+
+  <br><br>
+
+  <label>Sex
+    <br>
+    <input type="radio" name="cat[sex]" value="M"  <%= @cat.sex == 'M' ? 'checked' : ''%> >Male<br>
+    <input type="radio" name="cat[sex]" value="F"  <%= @cat.sex == 'F' ? 'checked' : ''%> >Female<br>
+  </label>
+
+  <br>
+
+  <label>Color
+    <select name="cat[color]">
+      <option disabled>--Choose a color--</option>
+      <option value="white" <%= @cat.color == 'white' ? 'selected' : ''%> >white</option>
+      <option value="black" <%= @cat.color == 'black' ? 'selected' : ''%> >black</option>
+      <option value="orange" <%= @cat.color == 'orange' ? 'selected' : ''%> >orange</option>
+      <option value="grey" <%= @cat.color == 'grey' ? 'selected' : ''%> >grey</option>
+      <option value="brown" <%= @cat.color == 'brown' ? 'selected' : ''%> >brown</option>
+      <option value="tabby" <%= @cat.color == 'tabby' ? 'selected' : ''%> >tabby</option>
+      <option value="other" <%= @cat.color == 'other' ? 'selected' : ''%> >other</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <label>Description
+    <textarea name="cat[description]" ><%= @cat.description %></textarea>
+  </label>
+
+  <br><br>
+
+  <input type="submit" value="Edit Cat">
+</form> -->
